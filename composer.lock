@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f7a678414f9d14af9e9d58199e2c8e2",
-    "packages": [],
+    "content-hash": "305db6b30afed588079dfb7affb99181",
+    "packages": [
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10 12:19:37"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -59,7 +107,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-02-16T16:15:51+00:00"
+            "time": "2017-02-16 16:15:51"
         },
         {
             "name": "myclabs/deep-copy",
@@ -156,7 +204,7 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
-            "time": "2017-03-05T19:02:22+00:00"
+            "time": "2017-03-05 19:02:22"
         },
         {
             "name": "phar-io/version",
@@ -257,7 +305,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2015-12-27T11:43:31+00:00"
+            "time": "2015-12-27 11:43:31"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -412,7 +460,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-03-03T17:09:02+00:00"
+            "time": "2017-03-03 17:09:02"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -475,7 +523,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-07T10:03:56+00:00"
+            "time": "2017-03-07 10:03:56"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -522,7 +570,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03T07:40:28+00:00"
+            "time": "2016-10-03 07:40:28"
         },
         {
             "name": "phpunit/php-text-template",
@@ -612,7 +660,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-03-07T15:42:04+00:00"
+            "time": "2017-03-07 15:42:04"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -661,7 +709,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-03-07T07:36:57+00:00"
+            "time": "2017-03-07 07:36:57"
         },
         {
             "name": "phpunit/phpunit",
@@ -744,7 +792,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-14T14:15:06+00:00"
+            "time": "2017-03-14 14:15:06"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -803,7 +851,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2017-03-07T08:51:01+00:00"
+            "time": "2017-03-07 08:51:01"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -848,7 +896,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2017-03-04T10:23:55+00:00"
+            "time": "2017-03-04 10:23:55"
         },
         {
             "name": "sebastian/comparator",
@@ -912,7 +960,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-03-07T07:07:51+00:00"
+            "time": "2017-03-07 07:07:51"
         },
         {
             "name": "sebastian/diff",
@@ -964,7 +1012,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-03-07T07:26:53+00:00"
+            "time": "2017-03-07 07:26:53"
         },
         {
             "name": "sebastian/environment",
@@ -1014,7 +1062,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-03-07T12:59:58+00:00"
+            "time": "2017-03-07 12:59:58"
         },
         {
             "name": "sebastian/exporter",
@@ -1081,7 +1129,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-03-07T07:32:56+00:00"
+            "time": "2017-03-07 07:32:56"
         },
         {
             "name": "sebastian/global-state",
@@ -1132,7 +1180,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2017-03-07T07:33:59+00:00"
+            "time": "2017-03-07 07:33:59"
         },
         {
             "name": "sebastian/object-enumerator",
@@ -1179,7 +1227,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2017-03-12T15:17:29+00:00"
+            "time": "2017-03-12 15:17:29"
         },
         {
             "name": "sebastian/object-reflector",
@@ -1224,7 +1272,7 @@
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
             "homepage": "https://github.com/sebastianbergmann/object-reflector/",
-            "time": "2017-03-12T15:10:22+00:00"
+            "time": "2017-03-12 15:10:22"
         },
         {
             "name": "sebastian/recursion-context",
@@ -1277,7 +1325,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2017-03-07T15:09:59+00:00"
+            "time": "2017-03-07 15:09:59"
         },
         {
             "name": "sebastian/resource-operations",
@@ -1319,7 +1367,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-            "time": "2016-10-03T07:43:09+00:00"
+            "time": "2016-10-03 07:43:09"
         },
         {
             "name": "sebastian/version",
@@ -1362,7 +1410,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2016-10-03T07:35:21+00:00"
+            "time": "2016-10-03 07:35:21"
         },
         {
             "name": "webmozart/assert",
@@ -1412,7 +1460,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23T20:04:41+00:00"
+            "time": "2016-11-23 20:04:41"
         }
     ],
     "aliases": [],
