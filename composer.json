@@ -6,6 +6,11 @@
         "phpunit/phpunit": "^6.0"
     },
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": ["src/", "tests"]
+        }
+    },
     "authors": [
         {
             "name": "Simone Gentili",
@@ -17,6 +22,11 @@
             "dev-master": "1.1-dev"
         }
     },
+    "config": {
+        "bin-dir": "bin"
+    },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "psr/log": "^1.0"
+    }
 }
