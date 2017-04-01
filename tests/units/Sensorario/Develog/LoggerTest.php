@@ -56,42 +56,7 @@ class LoggerTest extends TestCase
 
     public function tearDown()
     {
-        //@unlink($this->logFileName);
-    }
-
-    public function test()
-    {
-        $returnMessage = 'one line content';
-
-        $this->symfonyRequest = $this
-            ->getMockBuilder('Symfony\Component\HttpFoundation\Request')
-            ->disableOriginalConstructor()
-            ->setMethods(['getContent'])
-            ->getMock();
-        $this->symfonyRequest->server = $this
-            ->getMockBuilder('Symfony\Component\HttpFoundation\ServerBag')
-            ->disableOriginalConstructor()
-            ->setMethods(['get'])
-            ->getMock();
-        $this->symfonyRequest->server->expects($this->at(0))
-            ->method('get')
-            ->with('REQUEST_METHOD')
-            ->will($this->returnValue('GET'));
-        $this->symfonyRequest->server->expects($this->at(1))
-            ->method('get')
-            ->with('REQUEST_URI')
-            ->will($this->returnValue($returnMessage));
-
-        $this->assertFalse(file_exists($this->logFileName));
-
-        $this->logger->setLogFile($this->logFileName);
-        $this->logger->logSymfonyRequest($this->symfonyRequest);
-
-        $this->assertTrue(file_exists($this->logFileName));
-        $this->assertRegexp(
-            '/' . $returnMessage . '/',
-            file_get_contents($this->logFileName)
-        );
+        @unlink($this->logFileName);
     }
 }
 
