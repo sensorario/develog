@@ -3,11 +3,8 @@
 namespace Sensorario\Develog;
 
 use Sensorario\Develog\Request;
-use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
-use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
-class Logger extends PsrLogger implements
-    \Sensorario\Develog\SymfonyLoggerInterface
+class Logger extends PsrLogger
 {
     private $handler;
 
@@ -87,18 +84,5 @@ class Logger extends PsrLogger implements
         $level = strtoupper($level);
         $message = $this->getTime() . " log.$level $message\n";
         fwrite($this->getHandler(), $message);
-    }
-
-    public function logSymfonyRequest(SymfonyRequest $request)
-    {
-        $this->writeLog(
-            '> ' . $request->server->get('REQUEST_METHOD') .
-            ' ' . $request->server->get('REQUEST_URI')
-        );
-    }
-
-    public function logSymfonyResponse(SymfonyResponse $response)
-    {
-        $this->writeLog("< " . $response->getContent());
     }
 }
