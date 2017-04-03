@@ -6,6 +6,7 @@ use Sensorario\Develog\Request;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
+/** @deprecate */
 class Logger extends PsrLogger implements
     \Sensorario\Develog\SymfonyLoggerInterface
 {
@@ -64,6 +65,20 @@ class Logger extends PsrLogger implements
         $this->writeLog("> Host: " . $request::getRemoteAddress());
         $this->writeLog("> User-Agent: " . $request::getUserAgent());
         $this->writeLog("> Accept: " . $request::getAccept());
+        $this->writeLog("> ");
+    }
+
+    public function logRequestObject(HttpRequestObject $request) : void
+    {
+        $this->writeLog(
+            "> " .  $request->getHttpVerb() .
+            " " . $request->getRequestUri() .
+            " HTTP/1.1"
+        );
+
+        $this->writeLog("> Host: " . $request->getRemoteAddress());
+        $this->writeLog("> User-Agent: " . $request->getUserAgent());
+        $this->writeLog("> Accept: " . $request->getAccept());
         $this->writeLog("> ");
     }
 
