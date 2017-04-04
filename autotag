@@ -21,3 +21,4 @@ $patch++;
 
 passthru("git tag $major.$minor.$patch");
 passthru("git describe --tags");
+passthru("git push origin $major.$minor.$patch");
