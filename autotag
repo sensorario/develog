@@ -19,5 +19,15 @@ $patch = explode('.', $version[2])[0];
 
 $patch++;
 
+ob_start();
 passthru("git tag $major.$minor.$patch");
-passthru("git describe --tags");
+$buffer = ob_get_contents();
+
+$alreadyCreatedTag = strpos($buffer, 'already') == 0
+    ? true
+    : false;
+
+if (!$alreadyCreatedTag) {
+    passthru("git describe --tags");
+    passthru("git push origin $major.$minor.$patch");
+}
