@@ -1,8 +1,21 @@
 # Upgrade from 1.x
 
-## `Sensorario\Develog\Logger`
+## Removed classes
 
-Has been removed and replaces with.
+ - `Sensorario\Develog\Logger`
+ - `Sensorario\Develog\PsrLogger`
+ - `Sensorario\Develog\Request`
+ - `Sensorario\Develog\Response`
+ - `Sensorario\Develog\SymfonyLoggerInterface`
+
+## New classes
 
  - `Sensorario\Develog\Logger\HttpLogger`
  - `Sensorario\Develog\Logger\SymfonyLogger`
+ - `Sensorario\Develog\Logger\LoggerInterface`
+ - `Sensorario\Develog\Logger\AbstractLogger`
+
+## New Objects
+
+ - `Sensorario\Develog\Request\HttpRequestObject`
+ - `Sensorario\Develog\Request\RequestInterface`
