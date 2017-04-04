@@ -14,14 +14,18 @@ $logger->logRequest(HttpRequestObject::handleRequest());
 ## Handle Symfony Request
 
 ```
-use Symfony\Component\HttpFoundation\Request;
 use Sensorario\Develog\Logger\SymfonyLogger;
 use Sensorario\Develog\Request\HttpRequestObject;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 public function indexAction(Request $request)
 {
     $logger = new SymfonyLogger();
     $logger->setLogFile($this->getParameter('kernel.root_dir').'/../var/logs/foo.log');
     $logger->logSymfonyRequest($request);
+
+    $response = new Response('foo');
+    $logger->logSymfonyRequest($response);
 }
 ```
