@@ -2,7 +2,9 @@
 
 namespace Sensorario\Develog\Logger;
 
-abstract class AbstractLogger
+use Psr\Log\AbstractLogger as PsrAbstractLogger;
+
+abstract class AbstractLogger extends PsrAbstractLogger
 {
     protected $handler;
 
@@ -46,6 +48,11 @@ abstract class AbstractLogger
         $format = '[Y-m-d H:i:s]';
 
         return $now->format($format);
+    }
+
+    public function log($level, $message, array $context = array())
+    {
+        $this->writeLog($message, $level);
     }
 
     protected function writeLog($message, $level = 'INFO') : void

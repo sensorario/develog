@@ -2,7 +2,7 @@
 
 namespace Sensorario\Develog\Request;
 
-final class HttpRequestObject
+class HttpRequestObject
 {
     const REQUEST_METHOD = 'REQUEST_METHOD';
     const REQUEST_URI  = 'REQUEST_URI';
@@ -22,6 +22,9 @@ final class HttpRequestObject
         return new self($params);
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public static function handleRequest()
     {
         return new self([

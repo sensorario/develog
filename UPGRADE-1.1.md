@@ -1,5 +1,9 @@
 # Upgrade from 1.0
 
+## Code coverage
+
+Version `1.1` was not covered with tests. Version 1.1 fix this issue.
+
 ## `Sensorario\Develog\SymfonyLoggerInterface`
 
 Introduced new interface to talk with Symfony requests and responses.
