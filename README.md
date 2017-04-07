@@ -1,5 +1,15 @@
 # Usages
 
+## Log into file
+
+```
+use Sensorario\Develog\Logger\NormalLogger;
+
+$logger = new NormalLogger();
+$logger->setLogFile('/path/to/file');
+$logger->log('log this content …');
+```
+
 ## Handle Http Request
 
 ```

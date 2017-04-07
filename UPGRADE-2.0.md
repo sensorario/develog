@@ -14,6 +14,7 @@
  - `Sensorario\Develog\Logger\SymfonyLogger`
  - `Sensorario\Develog\Logger\LoggerInterface`
  - `Sensorario\Develog\Logger\AbstractLogger`
+ - `Sensorario\Develog\Logger\NormaLogger`
 
 ## New Objects
 
