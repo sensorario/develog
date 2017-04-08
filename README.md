@@ -7,7 +7,11 @@ use Sensorario\Develog\Logger\NormalLogger;
 
 $logger = new NormalLogger();
 $logger->setLogFile('/path/to/file');
-$logger->log('log this content …');
+$logger->write('log this content …');
+$logger->logClass($object);
+
+$obj = new \Bar\Foo();
+$logger->logClassWithMessage($obj, 'log this'); // Now is \Bar\Foo()
 ```
 
 ## Handle Http Request
