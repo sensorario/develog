@@ -3,9 +3,9 @@
 ## Log into file
 
 ```
-use Sensorario\Develog\Logger\NormalLogger;
+use Sensorario\Develog\Logger\NormaLogger;
 
-$logger = new NormalLogger();
+$logger = new NormaLogger();
 $logger->setLogFile('/path/to/file');
 $logger->write('log this content …');
 $logger->logClass($object);
