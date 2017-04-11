@@ -5,6 +5,11 @@ use Sensorario\Develog\Logger\HttpLogger;
 
 class HttpLoggerTest extends TestCase
 {
+    public function setUp()
+    {
+        $this->logFileName = __DIR__ . '/../../../../../var/delete.log';
+    }
+
     /**
      * @expectedException \RuntimeException
      * @expectedExceptionMessage Oops! Any log file defined
@@ -27,16 +32,19 @@ class HttpLoggerTest extends TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $logFileName = __DIR__ . '/../../../../../var/delete.log';
-
         $logger = new HttpLogger();
-        $logger->setLogFile($logFileName);
+        $logger->setLogFile($this->logFileName);
 
-        @unlink($logFileName);
-        $this->assertFileNotExists($logFileName);
+        @unlink($this->logFileName);
+        $this->assertFileNotExists($this->logFileName);
 
         $logger->logRequest($this->httpRequestObject);
 
-        $this->assertFileExists($logFileName);
+        $this->assertFileExists($this->logFileName);
+    }
+
+    public function tearDown()
+    {
+        @unlink($this->logFileName);
     }
 }

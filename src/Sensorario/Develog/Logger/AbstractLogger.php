@@ -30,6 +30,9 @@ abstract class AbstractLogger extends PsrAbstractLogger
         $this->logFile = $logFile;
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function getLogFile() : string
     {
         return $this->logFile;

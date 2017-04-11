@@ -2,7 +2,7 @@
 
 namespace Sensorario\Develog\Logger;
 
-final class NormaLogger extends AbstractLogger
+class NormaLogger extends AbstractLogger
 {
     public function write(string $message) : void
     {
