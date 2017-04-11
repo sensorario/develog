@@ -11,7 +11,7 @@ $logger->write('log this content …');
 $logger->logClass($object);
 
 $obj = new \Bar\Foo();
-$logger->logClassWithMessage($obj, 'log this'); // Now is \Bar\Foo()
+$logger->logClassWithMessage($obj, 'log this'); // log this \Bar\Foo()
 ```
 
 ## Handle Http Request
