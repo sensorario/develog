@@ -25,7 +25,11 @@ final class NormaLogger extends AbstractLogger
         $this->writeLog($message . ' ' . get_class($object));
     }
 
+    public function logType($object)
+    {
+        $this->writeLog(gettype($object));
+    }
+
     /** @todo add logIfObject */
     /** @todo add varExport */
-    /** @todo add logType */
 }
