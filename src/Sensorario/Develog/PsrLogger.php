@@ -2,6 +2,7 @@
 
 namespace Sensorario\Develog;
 
+/** @codeCoverageIgnore */
 abstract class PsrLogger implements
     \Psr\Log\LoggerInterface
 {

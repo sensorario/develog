@@ -24,6 +24,9 @@ class LoggerTest extends TestCase
         $this->logger->log('INFO', 'message');
     }
 
+    /**
+     * @covers Sensorario\Develog\Logger\AbstractLogger::getLogFile
+     */
     public function testLogFileAccessorsSetAndGetLogFile()
     {
         $this->logger->setLogFile($this->logFileName);
