@@ -14,7 +14,7 @@ class NormaLogger extends AbstractLogger
         $this->logClassWithMessage($object, 'object of class');
     }
 
-    public function logClassWithMessage($object, $message)
+    public function logClassWithMessage($object, $message) : void
     {
         if (!is_object($object)) {
             throw new \RuntimeException(
@@ -25,9 +25,14 @@ class NormaLogger extends AbstractLogger
         $this->writeLog($message . ' ' . get_class($object));
     }
 
-    public function logType($object)
+    public function logType($object) : void
     {
         $this->writeLog(gettype($object));
+    }
+
+    public function logArray(array $var) : void
+    {
+        $this->writeLog(var_export($var, true));
     }
 
     /** @todo add logIfObject */
