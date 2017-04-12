@@ -2,4 +2,8 @@
 
 ## `Sensorario\\Develog\\Logger\\NormaLogger`
 
-Introduced new component to just log into a specific log file.
+    public function write(string $message) : void
+    public function logClass($object, $message = 'object of class ') : void
+    public function logClassWithMessage($object, $message) : void
+    public function logType($object) : void
+    public function logArray(array $var) : void
