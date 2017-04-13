@@ -7,3 +7,4 @@
     public function logClassWithMessage($object, $message) : void
     public function logType($object) : void
     public function logArray(array $var) : void
+    public function logExport($content) : void
