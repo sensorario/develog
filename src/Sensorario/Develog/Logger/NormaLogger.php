@@ -32,9 +32,13 @@ class NormaLogger extends AbstractLogger
 
     public function logArray(array $var) : void
     {
+        $this->logExport($var);
+    }
+
+    public function logExport($content)
+    {
         $this->writeLog(var_export($var, true));
     }
 
     /** @todo add logIfObject */
-    /** @todo add varExport */
 }
