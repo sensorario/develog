@@ -9,6 +9,16 @@ These are a family of Logger I use in development. Sometimes to log in a particu
  - [handle Symfony request](#handle-symfony-request)
  - [create symfony service](#create-symfony-service)
 
+### Log without date
+
+```
+use Sensorario\Develog\Logger\NoDateLogger;
+
+$logger = new NoDateLogger();
+$logger->setLogFile('/path/to/file');
+$logger->write('log this content …');
+```
+
 ### Log into file
 
 ```
