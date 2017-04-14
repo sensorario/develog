@@ -15,6 +15,7 @@
  - `Sensorario\Develog\Logger\LoggerInterface`
  - `Sensorario\Develog\Logger\AbstractLogger`
  - `Sensorario\Develog\Logger\NormaLogger`
+ - `Sensorario\Develog\Logger\NoDateLogger`
 
 ## New Objects
 

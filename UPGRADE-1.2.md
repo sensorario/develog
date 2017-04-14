@@ -8,3 +8,7 @@
     public function logType($object) : void
     public function logArray(array $var) : void
     public function logExport($content) : void
+
+## `Sensorario\\Develog\\Logger\\NoDateLogger`
+
+    public function write(string $message) : void
