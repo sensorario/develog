@@ -62,6 +62,18 @@ abstract class AbstractLogger extends PsrAbstractLogger
     {
         $level = strtoupper($level);
         $message = $this->getTime() . " log.$level $message\n";
+        $this->writeToFile($message);
+    }
+
+    protected function writeRawLog($message, $level = 'INFO') : void
+    {
+        $level = strtoupper($level);
+        $message = " log.$level $message\n";
+        $this->writeToFile($message);
+    }
+
+    private function writeToFile($message)
+    {
         fwrite($this->getHandler(), $message);
     }
 }
