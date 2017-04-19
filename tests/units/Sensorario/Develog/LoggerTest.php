@@ -97,35 +97,3 @@ class LoggerTest extends TestCase
         );
     }
 }
-
-class MockRequest implements
-    \Sensorario\Develog\Request
-{
-    public function getHttpVerb()
-    {
-    }
-
-    public static function getRequestUri()
-    {
-    }
-
-    public static function getRemoteAddress()
-    {
-    }
-
-    public static function getUserAgent()
-    {
-    }
-
-    public static function getAccept()
-    {
-    }
-}
-
-class MockResponse implements
-    \Sensorario\Develog\Response
-{
-    public function getContent()
-    {
-    }
-}
