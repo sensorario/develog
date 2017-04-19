@@ -25,7 +25,7 @@ abstract class AbstractLogger extends PsrAbstractLogger
         return $this->handler;
     }
 
-    public function setLogFile($logFile) : void
+    public function setLogFile($logFile)
     {
         $this->logFile = $logFile;
     }
