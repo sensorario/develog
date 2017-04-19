@@ -4,17 +4,17 @@ namespace Sensorario\Develog\Logger;
 
 class NormaLogger extends AbstractLogger
 {
-    public function write(string $message) : void
+    public function write(string $message)
     {
         $this->writeLog($message);
     }
 
-    public function logClass($object, $message = 'object of class ') : void
+    public function logClass($object, $message = 'object of class ')
     {
         $this->logClassWithMessage($object, 'object of class');
     }
 
-    public function logClassWithMessage($object, $message) : void
+    public function logClassWithMessage($object, $message)
     {
         if (!is_object($object)) {
             throw new \RuntimeException(
@@ -25,12 +25,12 @@ class NormaLogger extends AbstractLogger
         $this->writeLog($message . ' ' . get_class($object));
     }
 
-    public function logType($object) : void
+    public function logType($object)
     {
         $this->writeLog(gettype($object));
     }
 
-    public function logArray(array $var) : void
+    public function logArray(array $var)
     {
         $this->logExport($var);
     }

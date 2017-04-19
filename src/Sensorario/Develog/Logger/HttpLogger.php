@@ -6,7 +6,7 @@ use Sensorario\Develog\Request\HttpRequestObject;
 
 final class HttpLogger extends AbstractLogger
 {
-    public function logRequest(HttpRequestObject $request) : void
+    public function logRequest(HttpRequestObject $request)
     {
         $this->writeLog(
             "> " .  $request->getHttpVerb() .
@@ -20,7 +20,7 @@ final class HttpLogger extends AbstractLogger
         $this->writeLog("> ");
     }
 
-    public function logResponse(Response $response) : void
+    public function logResponse(Response $response)
     {
         $this->writeLog("< HTTP/1.1 200 OK");
         $this->writeLog("< Date: " . (new \DateTime('now'))->format('D, d M Y H:i:s'));
