@@ -71,7 +71,7 @@ This is not mandatory, but if you want you can also configure these services ins
 services:
 
   logger.normal:
-    class: Sensorario\Develog\Logger\Normalogger
+    class: Sensorario\Develog\Logger\NormaLogger
 
   logger.symfony
     class: Sensorario\Develog\Logger\SymfonyLogger
