@@ -12,7 +12,6 @@ class LoggerTest extends TestCase
 
         @unlink($this->logFileName);
 
-        $this->markTestSkipped();
         $this->logger = new Logger();
     }
 
