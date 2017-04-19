@@ -2,6 +2,8 @@
 
 This `changelog` references the relevant changes done in 1.2 minor versions.
 
+ - 1.2.12
+ - bug #46 - fix test configuration for circleci
  - 1.2.10 (2017-04-18)
  - bug #42 - fix `php` version
  - bug #41 - fix `Normalogger` to `NormaLogger` in `readme` file
