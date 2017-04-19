@@ -37,7 +37,7 @@ class NormaLogger extends AbstractLogger
 
     public function logExport($content)
     {
-        $this->writeLog(var_export($var, true));
+        $this->writeLog(var_export($content, true));
     }
 
     /** @todo add logIfObject */
