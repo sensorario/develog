@@ -7,7 +7,7 @@ class HttpLoggerTest extends TestCase
 {
     public function setUp()
     {
-        $this->logFileName = __DIR__ . '/../../../../../var/delete.log';
+        $this->logFileName = __DIR__ . '/../../../../../var/logs/delete.log';
     }
 
     /**
