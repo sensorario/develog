@@ -139,4 +139,9 @@ abstract class AbstractLogger extends PsrAbstractLogger
             );
         }
     }
+
+    protected function writeVeryRawLog($message)
+    {
+        $this->writeToFile($message . "\n");
+    }
 }
