@@ -2,12 +2,14 @@
 
 This `changelog` references the relevant changes done in 1.2 minor versions.
 
+ - 1.2.14 (2017-04-26)
+ - bug #53 - fix "htto" to "http" in `readmne` file
  - 1.2.13 (2017-04-26)
  - bug #45 - rotate log when too big
  - bug #49 - keep one class per file
  - 1.2.12 (2017-04-17)
  - bug #48 - fix typo in `NormaLogger` class
- - bug #46 - fix test configuration for circleci
+ - bug #46 - fix test configuration for `circleci`
  - 1.2.10 (2017-04-18)
  - bug #42 - fix `php` version
  - bug #41 - fix `Normalogger` to `NormaLogger` in `readme` file
