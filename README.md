@@ -5,7 +5,7 @@ These are a family of Logger I use in development. Sometimes to log in a particu
 ## Usages
 
  - [log into file](#log-into-file)
- - [handle htto request](#handle-http-request)
+ - [handle http request](#handle-http-request)
  - [handle Symfony request](#handle-symfony-request)
  - [create symfony service](#create-symfony-service)
 
