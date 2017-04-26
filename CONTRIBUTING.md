@@ -15,11 +15,7 @@
 
 ## Create new Pull Requests
 
-Creating the pull request just tell if it contains new feature and/or fixes and indicate the destination release.
-
-Remember that fixes must be contained inside a minor release and new feature in next minor.
-
-If there is no backward compatibility, pull request will be merged in next major.
+Each pull request must contains a table to describe its purpose following semver logc: indicates if this pr contains BC, new features or fxes. Finally, must indicate the destination release.
 
 | question | answer |
 |---|---|

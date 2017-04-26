@@ -11,7 +11,7 @@ These are a family of Logger I use in development. Sometimes to log in a particu
 
 ## Tree
 
-Here the tree starting from version 1.2.13
+Here the tree starting from version 1.3.0
 
 ```
 src/
@@ -23,6 +23,7 @@ src/
         │   ├── LoggerInterface.php
         │   ├── NoDateLogger.php
         │   ├── NormaLogger.php
+        │   ├── RawLogger.php
         │   └── SymfonyLogger.php
         ├── Logger.php
         ├── PsrLogger.php
@@ -32,6 +33,16 @@ src/
         ├── Request.php
         ├── Response.php
         └── SymfonyLoggerInterface.php
+```
+
+### Just log without date and level
+
+```
+use Sensorario\Develog\Logger\RawLogger;
+
+$logger = new RawLogger();
+$logger->setLogFile('/path/to/file');
+$logger->write('log this content …');
 ```
 
 ### Log without date
