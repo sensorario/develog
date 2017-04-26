@@ -3,6 +3,7 @@
 This `changelog` references the relevant changes done in 1.2 minor versions.
 
  - 1.2.13
+ - bug #45 - rotate log when too big
  - bug #49 - keep one class per file
  - 1.2.12 (2017-04-17)
  - bug #48 - fix typo in `NormaLogger` class
