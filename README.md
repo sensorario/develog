@@ -8,6 +8,7 @@ These are a family of Logger I use in development. Sometimes to log in a particu
  - [handle http request](#handle-http-request)
  - [handle Symfony request](#handle-symfony-request)
  - [create symfony service](#create-symfony-service)
+ - [configure log size](#configure-log-size)
 
 ## Tree
 
@@ -32,6 +33,16 @@ src/
         ├── Request.php
         ├── Response.php
         └── SymfonyLoggerInterface.php
+```
+
+### Configure log size
+
+```
+use Sensorario\Develog\Logger\RawLogger;
+
+$logger = new RawLogger();
+$logger->setLogFile('/path/to/file');
+$logger->setSizeLimit(2000000);
 ```
 
 ### Log without date
