@@ -37,10 +37,11 @@ abstract class AbstractLogger extends PsrAbstractLogger
         return $this->logFile;
     }
 
-    public function __destruct()
+    public function close()
     {
         if ($this->handler) {
             fclose($this->getHandler());
+            $this->handler = null;
         }
     }
 
@@ -78,6 +79,8 @@ abstract class AbstractLogger extends PsrAbstractLogger
         if (filesize($logFile = $this->getLogFile()) >= $this->getSizeLimit()) {
             $this->ensureFileRotation($logFile);
         }
+
+        $this->close();
     }
 
     public function getFileSize()
