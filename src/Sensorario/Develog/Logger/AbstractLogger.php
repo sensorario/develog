@@ -124,12 +124,11 @@ abstract class AbstractLogger extends PsrAbstractLogger
         return true;
     }
 
-    /** @todo cover this case */
     private function ensureFileItsBeenCreated($filename)
     {
         if (!touch($this->logFile = $filename)) {
             throw new \RuntimeException(
-                'Oops! File cannot be created'
+                'Oops! File ' . $this->logFile . ' cannot be created'
             );
         }
     }
