@@ -2,6 +2,10 @@
 
 This `changelog` references the relevant changes done in 1.3 minor versions.
 
+## version 1.3.4 (????-??-??)
+
+ - bug #62 - remove useless file ^_^
+
 ## version 1.3.3 (2017-08-22)
 
  - bug #60 - write in right file
