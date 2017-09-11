@@ -11,6 +11,9 @@
             "": ["src/", "tests/", "tests/resources/"]
         }
     },
+    "config": {
+        "bin-dir": "bin"
+    },
     "authors": [
         {
             "name": "Simone Gentili",
