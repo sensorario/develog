@@ -19,13 +19,13 @@ File Limit
    After:
 
    ```php
-   $logger = new ArrayInput();
+   $logger = new NormaLogger();
    $logger->setSizeLimitInBytes(1024);
    ```
 
    or ...
 
    ```php
-   $logger = new ArrayInput();
+   $logger = new NormaLogger();
    $logger->setSizeLimitInMB(1);
    ```
