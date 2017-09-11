@@ -86,6 +86,26 @@ class NormaLoggerTest extends TestCase
         $this->assertEquals(2, $this->normalogger->countLogFiles());
     }
 
+    public function testSetSizeLimitInBytes()
+    {
+        $this->normalogger->setSizeLimitInBytes(444);
+
+        $this->assertEquals(
+            444,
+            $this->normalogger->getSizeLimitInBytes()
+        );
+    }
+
+    public function testSetSizeLimnitInMb()
+    {
+        $this->normalogger->setSizeLimitInMB(2);
+
+        $this->assertEquals(
+            2048,
+            $this->normalogger->getSizeLimitInBytes()
+        );
+    }
+
     public function tearDown()
     {
         $this->cleanLogFolder();

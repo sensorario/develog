@@ -95,9 +95,25 @@ abstract class AbstractLogger extends PsrAbstractLogger
             : $this->sizeLimit;
     }
 
+    public function getSizeLimitInBytes()
+    {
+        return $this->sizeLimit;
+    }
+
+    /** @deprecated */
     public function setSizeLimit($limit)
     {
         $this->sizeLimit = $limit;
+    }
+
+    public function setSizeLimitInBytes($limitInBytes)
+    {
+        $this->sizeLimit = $limitInBytes;
+    }
+
+    public function setSizeLimitInMB($limitInMB)
+    {
+        $this->sizeLimit = $limitInMB * 1024;
     }
 
     public function ensureFileRotation($filename)
