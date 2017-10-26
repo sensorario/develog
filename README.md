@@ -53,7 +53,7 @@ use Sensorario\Develog\Logger\RawLogger;
 
 $logger = new RawLogger();
 $logger->setLogFile('/path/to/file');
-$logger->setSizeLimit(2000000);
+$logger->setSizeLimitInBytes(2000000);
 ```
 
 ### Log without date
