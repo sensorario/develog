@@ -101,7 +101,7 @@ class NormaLoggerTest extends TestCase
         $this->normalogger->setSizeLimitInMB(2);
 
         $this->assertEquals(
-            2048,
+            2097152,
             $this->normalogger->getSizeLimitInBytes()
         );
     }
