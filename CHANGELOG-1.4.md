@@ -2,6 +2,10 @@
 
 This `changelog` references the relevant changes done in 1.4 minor versions.
 
+## version 1.4.1 (2017-10-26)
+
+ - bug #71 - wrong byte counts
+
 ## version 1.4.0 (2017-09-11)
 
  - feature #64 - improve size limit
