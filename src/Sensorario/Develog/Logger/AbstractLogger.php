@@ -113,7 +113,7 @@ abstract class AbstractLogger extends PsrAbstractLogger
 
     public function setSizeLimitInMB($limitInMB)
     {
-        $this->sizeLimit = $limitInMB * 1024;
+        $this->sizeLimit = $limitInMB * 1048576;
     }
 
     public function ensureFileRotation($filename)
