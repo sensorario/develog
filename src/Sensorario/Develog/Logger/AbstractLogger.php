@@ -30,7 +30,7 @@ abstract class AbstractLogger extends PsrAbstractLogger
     /**
      * @codeCoverageIgnore
      */
-    public function getLogFile() : string
+    public function getLogFile()
     {
         $this->ensureLogFileIsDefined();
 
@@ -45,7 +45,7 @@ abstract class AbstractLogger extends PsrAbstractLogger
         }
     }
 
-    public function getTime() : string
+    public function getTime()
     {
         $now = new \DateTime('now');
         $format = '[Y-m-d H:i:s]';

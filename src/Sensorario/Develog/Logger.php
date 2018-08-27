@@ -49,7 +49,7 @@ class Logger extends PsrLogger implements
         $this->logFile = $logFile;
     }
 
-    public function getLogFile() : string
+    public function getLogFile()
     {
         return $this->logFile;
     }
