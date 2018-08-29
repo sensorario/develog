@@ -1,5 +1,8 @@
+<!-- simply remove wrong lines -->
+
 | Q                | A
 | ---------------- | -----
-| Bug report?      | yes/no
-| Feature request? | yes/no
-| develog version  | x.y
+| Bug report?      | yes
+| Bug report?      | no
+| Feature request? | yes
+| Feature request? | no

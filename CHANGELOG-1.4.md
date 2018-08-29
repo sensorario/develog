@@ -2,15 +2,8 @@
 
 This `changelog` references the relevant changes done in 1.4 minor versions.
 
-## version 1.4.2 (2017-12-07)
-
+ * fix codebase to work within php5.5
  * add new templates for issues and pull reuqests
-
-## version 1.4.1 (2017-10-26)
-
- - bug #71 - wrong byte counts
-
-## version 1.4.0 (2017-09-11)
-
- - feature #64 - improve size limit
- - feature #65 - move `runtests` to `runtests.sh`
+ * fix byte counts
+ * improve size limit
+ * move `runtests` to `runtests.sh`

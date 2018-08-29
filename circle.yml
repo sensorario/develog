@@ -4,4 +4,4 @@ machine:
 
 test:
     override:
-        - ./runtests.sh
+        - php ./bin/phpunit
