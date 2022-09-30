@@ -5,7 +5,7 @@ use Sensorario\Develog\Logger\NormaLogger;
 
 class NormaLoggerTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->logFolderPath = __DIR__ . '/../../../../../var/logs/';
         $this->logFileName = $this->logFolderPath . '/foo.log';
@@ -66,7 +66,7 @@ class NormaLoggerTest extends TestCase
         $this->normalogger->setLogFile($this->logFileName);
 
         $fileSize = filesize($this->logFileName);
-        $this->normalogger->setSizeLimit($fileSize-1);
+        $this->normalogger->setSizeLimitInBytes($fileSize-1);
         $this->assertTrue($this->normalogger->hasReachedThresholds());
     }
 
@@ -80,7 +80,7 @@ class NormaLoggerTest extends TestCase
         $this->assertEquals(1, $this->normalogger->countLogFiles());
 
         $fileSize = filesize($this->logFileName);
-        $this->normalogger->setSizeLimit($fileSize-1);
+        $this->normalogger->setSizeLimitInBytes($fileSize-1);
 
         $this->normalogger->write('foo');
         $this->assertEquals(2, $this->normalogger->countLogFiles());
@@ -106,7 +106,7 @@ class NormaLoggerTest extends TestCase
         );
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->cleanLogFolder();
     }

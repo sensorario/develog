@@ -5,17 +5,16 @@ use Sensorario\Develog\Logger\HttpLogger;
 
 class HttpLoggerTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->logFileName = __DIR__ . '/../../../../../var/logs/delete.log';
     }
 
-    /**
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage Oops! Any log file defined
-     */
     public function testThrowExceptionWhenInvokedWithUndefinedLogFile()
     {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Oops! Any log file defined');
+
         $this->httpRequestObject = $this
             ->getMockBuilder('Sensorario\Develog\Request\HttpRequestObject')
             ->disableOriginalConstructor()
@@ -36,14 +35,13 @@ class HttpLoggerTest extends TestCase
         $logger->setLogFile($this->logFileName);
 
         @unlink($this->logFileName);
-        $this->assertFileNotExists($this->logFileName);
 
         $logger->logRequest($this->httpRequestObject);
 
         $this->assertFileExists($this->logFileName);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         @unlink($this->logFileName);
     }

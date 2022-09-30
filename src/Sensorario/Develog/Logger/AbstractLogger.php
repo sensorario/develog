@@ -100,12 +100,6 @@ abstract class AbstractLogger extends PsrAbstractLogger
         return $this->sizeLimit;
     }
 
-    /** @deprecated */
-    public function setSizeLimit($limit)
-    {
-        $this->sizeLimit = $limit;
-    }
-
     public function setSizeLimitInBytes($limitInBytes)
     {
         $this->sizeLimit = $limitInBytes;

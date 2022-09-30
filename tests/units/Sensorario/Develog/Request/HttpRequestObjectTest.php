@@ -5,7 +5,7 @@ use Sensorario\Develog\Request\HttpRequestObject;
 
 class HttpRequestObjectTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $params = [
             HttpRequestObject::REQUEST_METHOD => 'GET',

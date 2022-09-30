@@ -1,8 +1,13 @@
 UPGRADE FROM 1.x to 2.0
 =======================
 
+PHP verion
+----------
+
+From 2.0 the supported php version is 8.1.
+
 File Limit
--------
+----------
 
  * The `AbstractLogger::setSizeLimit()` method is removed. Use
    `AbstractLogger::setSizeLimitInBytes()` or `AbstractLogger::setSizeLimitInMB()`

@@ -5,7 +5,7 @@ use Sensorario\Develog\Logger;
 
 class LoggerTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->logFolderPath = __DIR__ . '/../../../';
         $this->logFileName = $this->logFolderPath . '/foo.log';
@@ -15,18 +15,14 @@ class LoggerTest extends TestCase
         $this->logger = new Logger();
     }
 
-    /**
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage Oops! Any log file defined
-     */
     public function testMustBeDefinedWithLogFile()
     {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Oops! Any log file defined');
+
         $this->logger->log('INFO', 'message');
     }
 
-    /**
-     * @covers Sensorario\Develog\Logger\AbstractLogger::getLogFile
-     */
     public function testLogFileAccessorsSetAndGetLogFile()
     {
         $this->logger->setLogFile($this->logFileName);
@@ -55,45 +51,5 @@ class LoggerTest extends TestCase
         $this->logger->logResponse(new MockResponse());
 
         $this->assertTrue(file_exists($this->logFileName));
-    }
-
-    public function tearDown()
-    {
-        //@unlink($this->logFileName);
-    }
-
-    public function test()
-    {
-        $returnMessage = 'one line content';
-
-        $this->symfonyRequest = $this
-            ->getMockBuilder('Symfony\Component\HttpFoundation\Request')
-            ->disableOriginalConstructor()
-            ->setMethods(['getContent'])
-            ->getMock();
-        $this->symfonyRequest->server = $this
-            ->getMockBuilder('Symfony\Component\HttpFoundation\ServerBag')
-            ->disableOriginalConstructor()
-            ->setMethods(['get'])
-            ->getMock();
-        $this->symfonyRequest->server->expects($this->at(0))
-            ->method('get')
-            ->with('REQUEST_METHOD')
-            ->will($this->returnValue('GET'));
-        $this->symfonyRequest->server->expects($this->at(1))
-            ->method('get')
-            ->with('REQUEST_URI')
-            ->will($this->returnValue($returnMessage));
-
-        $this->assertFalse(file_exists($this->logFileName));
-
-        $this->logger->setLogFile($this->logFileName);
-        $this->logger->logSymfonyRequest($this->symfonyRequest);
-
-        $this->assertTrue(file_exists($this->logFileName));
-        $this->assertRegexp(
-            '/' . $returnMessage . '/',
-            file_get_contents($this->logFileName)
-        );
     }
 }
