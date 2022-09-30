@@ -7,3 +7,4 @@ This `changelog` references the relevant changes done in 1.4 minor versions.
  * fix byte counts
  * improve size limit
  * move `runtests` to `runtests.sh`
+ * fix logger interface to log responses

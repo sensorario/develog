@@ -3,6 +3,7 @@
 namespace Sensorario\Develog\Logger;
 
 use Sensorario\Develog\Request\HttpRequestObject;
+use Sensorario\Develog\Response;
 
 final class HttpLogger extends AbstractLogger
 {
