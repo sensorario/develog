@@ -53,7 +53,7 @@ abstract class AbstractLogger extends PsrAbstractLogger
         return $now->format($format);
     }
 
-    public function log($level, $message, array $context = array())
+    public function log($level, $message, array $context = array()): void
     {
         $this->writeLog($message, $level);
     }
